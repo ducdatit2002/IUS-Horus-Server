@@ -19,7 +19,10 @@ http://localhost:9001
 
 1. Start container
 ```bash
-docker run --gpus '"device=0"' --runtime=nvidia -it --name vbs_container --network services_milvus-network --env-file .env -v ./:/app taindp98/aic-vbs:gpu /bin/bash
+docker run --gpus '"device=0"' -it --name vbs_container --network services_milvus-network --env-file .env \
+-v ./:/app \
+-v /home/datpham/datpham/IUSHorus:/home/datpham/datpham/IUSHorus \
+taindp98/aic-vbs:gpu /bin/bash
 ```
 2. Run
 ```bash
