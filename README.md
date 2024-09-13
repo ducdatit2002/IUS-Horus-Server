@@ -24,7 +24,15 @@ docker run --gpus '"device=0"' -it --name vbs_container --network services_milvu
 -v /home/datpham/datpham/IUSHorus:/home/datpham/datpham/IUSHorus \
 taindp98/aic-vbs:gpu /bin/bash
 ```
-2. Run
+2. Run container
+```bash
+docker start vbs_container
+```
+3. Environment
+```bash
+conda activate vbs
+```
+4. Run
 ```bash
 bash scripts/run.sh
 ```
