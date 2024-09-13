@@ -36,7 +36,11 @@ docker exec -it vbs_container /bin/bash
 ```bash
 conda activate vbs
 ```
-4. Run
+4. Check connection
+```bash
+docker network inspect services_milvus-network
+```
+5. Run
 ```bash
 bash scripts/run.sh
 ```
