@@ -40,8 +40,12 @@ conda activate vbs
 ```bash
 docker network inspect services_milvus-network
 ```
-5. Run
+5. Run 01
 ```bash
-bash scripts/run.sh
+scripts/monitor.sh
+```
+6. Run 02
+```bash
+scripts/run.sh
 ```
 
