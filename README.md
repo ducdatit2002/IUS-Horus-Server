@@ -30,6 +30,8 @@ taindp98/aic-vbs:gpu /bin/bash
 2. Run container
 ```bash
 docker start vbs_container
+```
+```bash
 docker exec -it vbs_container /bin/bash
 ```
 3. Environment
