@@ -3,7 +3,7 @@
 ## Run the Docker Compose Services
 0. cd
 ```bash
-/home/datpham/datpham/IUSHorus/Video-Search
+cd /home/datpham/datpham/IUSHorus/Video-Search
 ```
 2. Run the service container
 ```bash
