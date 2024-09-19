@@ -50,4 +50,8 @@ scripts/monitor.sh
 ```bash
 scripts/run.sh
 ```
+7. Run Frame Selection
+```bash
+scripts/frame_selection_1.sh
+```
 
