@@ -73,3 +73,7 @@ pip install decord==0.6.0
 ```bash
 conda install -c conda-forge ffmpeg
 ``` 
+4. GPU
+```bash
+pip install psutil gputil
+```
