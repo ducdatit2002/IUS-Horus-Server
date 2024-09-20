@@ -55,3 +55,21 @@ scripts/run.sh
 scripts/frame_selection_1.sh
 ```
 
+### Server anh Tiến
+
+1. Docker run
+```bash
+docker run --gpus '"device=0"' -it --name vbs_container --env-file .env \
+-v ./:/app \
+-v /root/IUSHorus:/root/IUSHorus \
+taindp98/aic-vbs:gpu /bin/bash
+```
+2. Cài thư viện
+```
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
+pip install decord==0.6.0
+```
+3. Cài ffmpeg
+```bash
+conda install -c conda-forge ffmpeg
+``` 
