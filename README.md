@@ -77,3 +77,7 @@ conda install -c conda-forge ffmpeg
 ```bash
 pip install psutil gputil
 ```
+5. Ingestion
+```bash
+scripts/ingestion.sh
+```
