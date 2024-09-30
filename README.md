@@ -81,3 +81,47 @@ pip install psutil gputil
 ```bash
 scripts/ingestion.sh
 ```
+
+### Cài docker
+1. Xoá phiên bản cũ
+```bash
+sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+2. Xoá đường dẫn
+```bash
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+```
+3. Cài đặt các gói cần thiết: Trước tiên, hãy chắc chắn rằng bạn đã cài đặt các gói cần thiết cho việc cài Docker:
+```bash
+sudo apt-get update
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+```
+4. Thêm khóa GPG của Docker: Thêm khóa GPG chính thức của Docker:
+```bash
+sudo mkdir -m 0755 -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+5. Thêm repository Docker: Thêm địa chỉ Docker vào danh sách các nguồn phần mềm:
+```bash
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+6. Cài đặt Docker
+```bash
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+7. Cài đặt NVIDIA Container Toolkit
+```bash
+sudo apt-get install -y nvidia-docker2
+```
+8. Chạy Docker không cần sudo
+```bash
+sudo usermod -aG docker $USER
+```
