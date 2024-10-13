@@ -85,7 +85,10 @@ scripts/ingestion.sh
 ```bash
 cp -r /root/IUSHorus/taindp/Video-Search/services/volumes /root/IUSHorus/Video-Search/services/
 ```
-
+7. Chunk volumes
+```bash
+split -n 5 -d -a 1 volumes.zip volumes_chunk_
+```
 ### Cài docker
 1. Xoá phiên bản cũ
 ```bash
