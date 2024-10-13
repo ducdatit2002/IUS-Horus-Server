@@ -81,6 +81,10 @@ pip install psutil gputil
 ```bash
 scripts/ingestion.sh
 ```
+6. Copy data từ source a Tài qua source Đạt
+```bash
+cp -r /root/IUSHorus/taindp/Video-Search/services/volumes /root/IUSHorus/Video-Search/services/
+```
 
 ### Cài docker
 1. Xoá phiên bản cũ
