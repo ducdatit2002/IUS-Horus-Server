@@ -68,6 +68,7 @@ taindp98/aic-vbs:gpu /bin/bash
 ```
 pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
 pip install decord==0.6.0
+pip install pymilvus[model]
 ```
 3. Cài ffmpeg
 ```bash
